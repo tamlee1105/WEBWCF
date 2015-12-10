@@ -1,0 +1,76 @@
+﻿// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: Repository.cs
+// Solution: iShopSolution
+// Project: Business
+// Time: 9:19 PM 12/05/2012
+
+using System;
+using System.Diagnostics;
+using System.Linq;
+using Business.Database;
+using Business.Entity;
+using Business.IRepository;
+
+namespace Business.Repository
+{
+    public class MyRepository : IMyRepository
+    {
+        private ShopDataContext _data = ShopData.DataContext;
+
+        #region Implementation of IMyRepository
+
+        public int GetUnitProductAllRepository(int proId)
+        {
+            try
+            {
+                int temp;
+                var unit = GetUnitProductByRepository(proId, 1, out temp);
+                unit += GetUnitProductByRepository(proId, 2, out temp);
+                return unit;
+            }
+            catch (Exception exception)
+            {
+                Debug.WriteLine("Get unit product all repository: " + exception.Message);
+                return 0;
+            }
+
+
+        }
+        public int GetUnitProductByRepository(int proId, int repo, out int Id)
+        {
+            var kho = _data.Khos.Where(k => k.IDSanPham == proId && k.Kho1 == repo && (bool)k.LaPhieuNhap).OrderByDescending(k => k.ID).FirstOrDefault();
+
+            if (kho != null && kho.SoLuongTonKho != null)
+            {
+                Id = kho.ID;
+                return (int)kho.SoLuongTonKho;
+            }
+
+            Id = 0;
+            return 0;
+        }
+
+        public void Add(MyRepo repo)
+        {
+            int oldRepoId;
+            var oldUnit = GetUnitProductByRepository(repo.ProductId, repo.Repository, out oldRepoId);
+            if (oldUnit > 0)
+            {
+                repo.Inventory = oldRepoId;
+                repo.StockUnit += oldUnit;
+            }
+
+            var kho = repo.ConvertToKho();
+            _data.Khos.InsertOnSubmit(kho);
+            Submit();
+        }
+
+        public void Submit()
+        {
+            _data.SubmitChanges();
+        }
+
+        #endregion
+    }
+}

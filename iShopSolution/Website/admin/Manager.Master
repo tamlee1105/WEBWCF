@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Manager.master.cs" Inherits="Website.admin.Manager" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>iShop Manager</title>
+    <link href="../Css/Main.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../laptop.ico" />
+    <link href="../Css/Main.css" rel="stylesheet" type="text/css" />
+    <!--<link href="../Css/Asp.css" rel="Stylesheet" type="text/css" />-->
+    <link href="../Css/IE7.css" rel="Stylesheet" type="text/css" />    
+    <link rel="stylesheet" href="../Css/nivo-slider.css" type="text/css" media="screen" />
+     <script type="text/javascript" src="../Js/jquery.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery-1.4.3.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="menu-container-user">
+        <div class="fx">
+            <div style="float: left; color: #999999;">
+                Chào mừng bạn đến với trang quản trị <b>ishop</b></div>
+        </div>
+    </div>
+    <div class="bg_top_banner">
+        <div class="banner">
+            <div>
+                <a href="#">
+                    <img src="../images/logo.png" alt="" width="166px" height="80px" /></a></div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: ShopData.cs
+// Solution: iShopSolution
+// Project: Business
+// Time: 4:25 PM 22/04/2012
+namespace Business.Database
+{
+    public static class ShopData
+    {
+        public static ShopDataContext DataContext
+        {
+            get { return new ShopDataContext(); }
+        }
+    }
+}

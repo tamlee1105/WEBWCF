@@ -1,0 +1,21 @@
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\Service\bin\Service.dll
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\Service\bin\Service.pdb
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\Service\bin\Business.dll
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\Service\bin\Business.pdb
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\Service\obj\Debug\ResolveAssemblyReference.cache
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\Service\obj\Debug\Service.dll
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\Service\obj\Debug\Service.pdb
+F:\Master\DoAnWebservice_SGU\Service\bin\Service.dll
+F:\Master\DoAnWebservice_SGU\Service\bin\Service.pdb
+F:\Master\DoAnWebservice_SGU\Service\bin\Business.dll
+F:\Master\DoAnWebservice_SGU\Service\bin\Business.pdb
+F:\Master\DoAnWebservice_SGU\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+F:\Master\DoAnWebservice_SGU\Service\obj\Debug\Service.dll
+F:\Master\DoAnWebservice_SGU\Service\obj\Debug\Service.pdb
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\Service\bin\Service.dll
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\Service\bin\Service.pdb
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\Service\bin\Business.dll
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\Service\bin\Business.pdb
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\Service\obj\Debug\Service.dll
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\Service\obj\Debug\Service.pdb

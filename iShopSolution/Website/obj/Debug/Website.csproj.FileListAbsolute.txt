@@ -1,0 +1,17 @@
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\Website\bin\Website.dll
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\Website\bin\Website.pdb
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\Website\bin\AjaxControlToolkit.dll
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\Website\bin\wpCumulus.dll
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\Website\obj\Debug\ResolveAssemblyReference.cache
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\Website\obj\Debug\Website.dll
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\Website\obj\Debug\Website.pdb
+F:\Master\DoAnWebservice_SGU\Website\bin\Website.dll
+F:\Master\DoAnWebservice_SGU\Website\bin\Website.pdb
+F:\Master\DoAnWebservice_SGU\Website\obj\Debug\Website.csprojResolveAssemblyReference.cache
+F:\Master\DoAnWebservice_SGU\Website\obj\Debug\Website.dll
+F:\Master\DoAnWebservice_SGU\Website\obj\Debug\Website.pdb
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\Website\bin\Website.dll
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\Website\bin\Website.pdb
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\Website\obj\Debug\Website.csprojResolveAssemblyReference.cache
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\Website\obj\Debug\Website.dll
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\Website\obj\Debug\Website.pdb

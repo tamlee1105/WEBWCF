@@ -1,0 +1,33 @@
+﻿// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: ReceiptNote.cs
+// Solution: iShopSolution
+// Project: Business
+// Time: 2:22 PM 12/05/2012
+
+using System;
+using System.Collections.Generic;
+
+namespace Business.Entity
+{
+    public class ReceiptNote
+    {
+        public int Id { get; set; }
+
+        public DateTime Date { get; set; }
+
+        public bool Status { get; set; }
+
+        public string StrStatus
+        {
+            get { return Status ? "Checked" : "Pending"; }
+        }
+
+        private List<ReceiptNoteDetail> _noteDetails;
+        public List<ReceiptNoteDetail> ReceiptNoteDetails
+        {
+            get { return _noteDetails ?? (_noteDetails = new List<ReceiptNoteDetail>()); }
+            set { _noteDetails = value; }
+        }
+    }
+}

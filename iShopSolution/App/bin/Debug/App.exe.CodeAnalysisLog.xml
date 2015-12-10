@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio 10.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="10.0">
+ <Targets>
+  <Target Name="F:\Master\DoAnWebservice_SGU\App\bin\Debug\App.exe">
+   <Modules>
+    <Module Name="app.exe">
+     <Namespaces>
+      <Namespace Name="App">
+       <Types>
+        <Type Name="FormAppConfig" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnOK_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormAppConfig.cs" Line="41">In method 'FormAppConfig.btnOK_Click(object, EventArgs)', object 'new FileStream("config.ishop", FileMode.Create)' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new FileStream("config.ishop", FileMode.Create)' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FormDetailsProduct" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddUserControlDescription(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormDetailsProduct.cs" Line="87">In method 'FormDetailsProduct.AddUserControlDescription(string)', object '&lt;&gt;g__initLocal0' is not disposed along all exception paths. Call System.IDisposable.Dispose on object '&lt;&gt;g__initLocal0' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FormMain" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnCategory_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormMain.cs" Line="17">In method 'FormMain.btnCategory_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#btnConfig_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormMain.cs" Line="29">In method 'FormMain.btnConfig_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#btnProduct_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormMain.cs" Line="23">In method 'FormMain.btnProduct_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FormMainFinal" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#categoryToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormMainFinal.cs" Line="57">In method 'FormMainFinal.categoryToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'new UsrCtrlCategoryManager()' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#configToolStripMenuItem1_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormMainFinal.cs" Line="45">In method 'FormMainFinal.configToolStripMenuItem1_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#deliveryNoteToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormMainFinal.cs" Line="112">In method 'FormMainFinal.deliveryNoteToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'new UsrCtrlManagerDeliveryNote()' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#productToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormMainFinal.cs" Line="62">In method 'FormMainFinal.productToolStripMenuItem_Click(object, EventArgs)', object '&lt;&gt;g__initLocal6' is not disposed along all exception paths. Call System.IDisposable.Dispose on object '&lt;&gt;g__initLocal6' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormMainFinal.cs" Line="68">In method 'FormMainFinal.productToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'ucAdd' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormMainFinal.cs" Line="79">In method 'FormMainFinal.productToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'ucEdit' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#receiptNoteToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormMainFinal.cs" Line="124">In method 'FormMainFinal.receiptNoteToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'new UsrCtrlAddReceiptNote(new ReceiptNote())' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormMainFinal.cs" Line="124">In method 'FormMainFinal.receiptNoteToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'new UsrCtrlAddReceiptNote(this.uc.SelectedItem)' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#reportToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormMainFinal.cs" Line="152">In method 'FormMainFinal.reportToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'new UsrCtrlReport()' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#statisticsToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormMainFinal.cs" Line="147">In method 'FormMainFinal.statisticsToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'new UsrCtrlStatistics()' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FormProductManager" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnAdd_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormProductManager.cs" Line="118">In method 'FormProductManager.btnAdd_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#dataGridViewProduct_CellClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App" File="FormProductManager.cs" Line="62">In method 'FormProductManager.dataGridViewProduct_CellClick(object, DataGridViewCellEventArgs)', call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="App.MyUsrCtrl">
+       <Types>
+        <Type Name="UsrCtrlAppConfig" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnOK_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App\MyUsrCtrl" File="UsrCtrlAppConfig.cs" Line="38">In method 'UsrCtrlAppConfig.btnOK_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'new FileStream("config.ishop", FileMode.Create)' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UsrCtrlDetailsProduct" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddUserControlDescription(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2015-11-30 09:47:34Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Master\DoAnWebservice_SGU\App\MyUsrCtrl" File="UsrCtrlDetailsProduct.cs" Line="90">In method 'UsrCtrlDetailsProduct.AddUserControlDescription(string)', object '&lt;&gt;g__initLocal0' is not disposed along all exception paths. Call System.IDisposable.Dispose on object '&lt;&gt;g__initLocal0' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="ExceptionEdge">In method {0}, object {1} is not disposed along all exception paths. Call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

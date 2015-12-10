@@ -1,0 +1,21 @@
+﻿// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: WeightedAverageUnitPrice.cs
+// Solution: iShopSolution
+// Project: Business
+// Time: 9:49 PM 12/05/2012
+
+using System;
+
+namespace Business.Entity
+{
+    public class WeightedAverageUnitPrice
+    {
+        public int Id { get; set; }
+        public decimal AverageUnitPrice { get; set; }
+        public DateTime Date { get; set; }
+
+        public int ProductId { get; set; }
+        public Product Product { get; set; }
+    }
+}

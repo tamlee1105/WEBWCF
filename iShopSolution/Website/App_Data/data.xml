@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<shoppingcart>
+  <cart>
+    <id>31</id>
+    <deliveryId>0</deliveryId>
+    <status>1</status>
+    <date>2015-12-09T15:36:01.3601529+07:00</date>
+    <totalprice>86670000.0000</totalprice>
+    <orderdetails>
+      <detail>
+        <productId>49</productId>
+        <productName>Apple iMac 21.5 inch ME086</productName>
+        <productImage>http%3a%2f%2flocalhost%3a1805%2fUpload%2fshop%2fimac.jpg</productImage>
+        <productPrice>28890000.0000</productPrice>
+        <cateId>8</cateId>
+        <cateName>iMac</cateName>
+        <unit>3</unit>
+      </detail>
+    </orderdetails>
+    <customer>
+      <codeid>783627695</codeid>
+      <name>Bà Nghiệp</name>
+      <address>69 Nguyễn Trãi</address>
+      <phone>0969678969</phone>
+      <email>nghiep@gmail.com</email>
+    </customer>
+  </cart>
+  <cart>
+    <id>32</id>
+    <deliveryId>61</deliveryId>
+    <status>3</status>
+    <date>2015-12-10T07:02:55.700827+07:00</date>
+    <totalprice>2429000.0000</totalprice>
+    <orderdetails>
+      <detail>
+        <productId>46</productId>
+        <productName>Apple iPad Pro Wi-Fi 128 GB</productName>
+        <productImage>http%3a%2f%2flocalhost%3a1805%2fUpload%2fshop%2fipad_pro_gold.png</productImage>
+        <productPrice>2429000.0000</productPrice>
+        <cateId>3</cateId>
+        <cateName>iPad</cateName>
+        <unit>1</unit>
+      </detail>
+    </orderdetails>
+    <customer>
+      <codeid>875497653</codeid>
+      <name>Ông Tâm</name>
+      <address>7 thành thái</address>
+      <phone>0975835672</phone>
+      <email>tam@gmail.com</email>
+    </customer>
+  </cart>
+  <cart>
+    <id>33</id>
+    <deliveryId>60</deliveryId>
+    <status>3</status>
+    <date>2015-12-10T07:03:54.2971926+07:00</date>
+    <totalprice>21000000.0000</totalprice>
+    <orderdetails>
+      <detail>
+        <productId>47</productId>
+        <productName>iPad Air 16GB 4G</productName>
+        <productImage>http%3a%2f%2flocalhost%3a1805%2fUpload%2fshop%2fipad-air-white.jpg</productImage>
+        <productPrice>10500000.0000</productPrice>
+        <cateId>3</cateId>
+        <cateName>iPad</cateName>
+        <unit>2</unit>
+      </detail>
+    </orderdetails>
+    <customer>
+      <codeid>964578392</codeid>
+      <name>Ông Thắng</name>
+      <address>69 an dương vương</address>
+      <phone>07536278</phone>
+      <email>thang@gmail.com</email>
+    </customer>
+  </cart>
+  <cart>
+    <id>34</id>
+    <deliveryId>0</deliveryId>
+    <status>1</status>
+    <date>2015-12-10T08:52:09.3579451+07:00</date>
+    <totalprice>7990000.0000</totalprice>
+    <orderdetails>
+      <detail>
+        <productId>45</productId>
+        <productName>iPhone 5c 16GB Lock</productName>
+        <productImage>http%3a%2f%2flocalhost%3a1805%2fUpload%2fshop%2fiphone+5c.png</productImage>
+        <productPrice>7990000.0000</productPrice>
+        <cateId>2</cateId>
+        <cateName>iPhone</cateName>
+        <unit>1</unit>
+      </detail>
+    </orderdetails>
+    <customer>
+      <codeid>456327543</codeid>
+      <name>Ông tam</name>
+      <address>ly thuong kiet</address>
+      <phone>0976564356</phone>
+      <email>tam@gmail.com</email>
+    </customer>
+  </cart>
+  <cart>
+    <id>35</id>
+    <deliveryId>62</deliveryId>
+    <status>3</status>
+    <date>2015-12-10T09:28:11.3006171+07:00</date>
+    <totalprice>26042500.0000</totalprice>
+    <orderdetails>
+      <detail>
+        <productId>48</productId>
+        <productName>Macbook Pro Retina 13″ MF839 (2015)</productName>
+        <productImage>http%3a%2f%2flocalhost%3a1805%2fUpload%2fshop%2fmacbook-pro.jpg</productImage>
+        <productPrice>26042500.0000</productPrice>
+        <cateId>4</cateId>
+        <cateName>Macbook</cateName>
+        <unit>1</unit>
+      </detail>
+    </orderdetails>
+    <customer>
+      <codeid>765387648</codeid>
+      <name>Ông thang</name>
+      <address>thanh thai</address>
+      <phone>0976543256</phone>
+      <email>thang@gmail.com</email>
+    </customer>
+  </cart>
+</shoppingcart>

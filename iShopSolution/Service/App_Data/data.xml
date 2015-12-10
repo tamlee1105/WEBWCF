@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<shoppingcart>
+  <cart>
+    <id>33</id>
+    <deliveryId>60</deliveryId>
+    <status>3</status>
+    <date>2015-12-10T07:03:54.2971926+07:00</date>
+    <totalprice>21000000.0000</totalprice>
+    <orderdetails>
+      <detail>
+        <productId>47</productId>
+        <productName>iPad Air 16GB 4G</productName>
+        <productImage>http%3a%2f%2flocalhost%3a1805%2fUpload%2fshop%2fipad-air-white.jpg</productImage>
+        <productPrice>10500000.0000</productPrice>
+        <cateId>3</cateId>
+        <cateName>iPad</cateName>
+        <unit>2</unit>
+      </detail>
+    </orderdetails>
+    <customer>
+      <codeid>964578392</codeid>
+      <name>Ông Thắng</name>
+      <address>69 an dương vương</address>
+      <phone>07536278</phone>
+      <email>thang@gmail.com</email>
+    </customer>
+  </cart>
+</shoppingcart>

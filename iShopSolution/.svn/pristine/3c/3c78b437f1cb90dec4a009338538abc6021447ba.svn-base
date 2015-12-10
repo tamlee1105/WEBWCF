@@ -1,0 +1,90 @@
+﻿// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: ReceiptNoteRepository.cs
+// Solution: iShopSolution
+// Project: Business
+// Time: 2:42 PM 12/05/2012
+
+using System;
+using System.Linq;
+using Business.Database;
+using Business.Entity;
+using Business.IRepository;
+
+namespace Business.Repository
+{
+    public class ReceiptNoteRepository : IReceiptNoteRepository
+    {
+
+        private ShopDataContext _data = ShopData.DataContext;
+        //private IReceiptNoteDetailRepository _noteDetailRepository = new ReceiptNoteDetailRepository();
+        //private IWeightedAverageUnitPriceRepository _weightedAverageUnitPriceRepository = new WeightedAverageUnitPriceRepository();
+        //private MyRepository _myRepository = new MyRepository();
+
+        #region Implementation of IReceiptNoteRepository
+
+        //public void Add(ReceiptNote receiptNote)
+        //{
+
+
+        //    var _noteDetailRepository = new ReceiptNoteDetailRepository();
+        //    var _weightedAverageUnitPriceRepository = new WeightedAverageUnitPriceRepository();
+        //    var _myRepository = new MyRepository();
+
+        //    // save receipt note
+        //    var phieuNhap = new PhieuNhapHang
+        //                        {
+        //                            ThoiGianNhap = DateTime.Now
+        //                        };
+
+        //    _data.PhieuNhapHangs.InsertOnSubmit(phieuNhap);
+        //    Submit();
+
+        //    // save list receipt note details
+        //    foreach (var noteDetail in receiptNote.ReceiptNoteDetails)
+        //    {
+        //        // add one receipt note details
+        //        noteDetail.ReceiptNoteId = phieuNhap.ID;
+        //        _noteDetailRepository.Add(noteDetail);
+
+        //        // add (update) new weighted average unit price of product 
+        //        _weightedAverageUnitPriceRepository.Add(noteDetail);
+        //        //Submit();
+        //        // add (update) new repository
+        //        var repo = new MyRepo
+        //                       {
+        //                           ReceiptDeliveryId = noteDetail.Id,
+        //                           IsReceipt = true,
+        //                           StockUnit = noteDetail.Unit,
+        //                           ProductId = noteDetail.ProductId,
+        //                           Date = DateTime.Now,
+        //                           Repository = noteDetail.Repository
+        //                       };
+        //        _myRepository.Add(repo);
+        //        //Submit();
+
+        //    }
+
+        //}
+
+        public IQueryable<ReceiptNote> GetAll()
+        {
+            return _data.PhieuNhapHangs.Select(note => note.ConvertToReceiptNote());
+        }
+
+        public void Add(ReceiptNote receiptNote)
+        {
+            receiptNote.Date = DateTime.Now;
+            receiptNote.Status = true;
+            var phieunhap = receiptNote.ConvertToPhieuNhapHang();
+            _data.PhieuNhapHangs.InsertOnSubmit(phieunhap);
+        }
+
+        public void Submit()
+        {
+            _data.SubmitChanges();
+        }
+
+        #endregion
+    }
+}

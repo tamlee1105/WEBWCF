@@ -1,0 +1,28 @@
+﻿// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: Customer.cs
+// Solution: iShopSolution
+// Project: Business
+// Time: 10:43 PM 16/05/2012
+
+using System.Runtime.Serialization;
+
+namespace Business.Entity
+{
+    [DataContract]
+    public class Customer
+    {
+        [DataMember]
+        public int Id { get; set; }
+        [DataMember]
+        public string Name { get; set; }
+        [DataMember]
+        public string Phone { get; set; }
+        [DataMember]
+        public string Address { get; set; }
+        [DataMember]
+        public string CodeId { get; set; }
+        [DataMember]
+        public string Email { get; set; }
+    }
+}

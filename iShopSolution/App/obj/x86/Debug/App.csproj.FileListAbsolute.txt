@@ -1,0 +1,97 @@
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\bin\Debug\App.exe.config
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\bin\Debug\App.exe
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\bin\Debug\App.pdb
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\bin\Debug\Business.dll
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\bin\Debug\Business.pdb
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.FormAppConfig.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.FormCategoryManager.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.FormDetailsProduct.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.FormMain.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.FormMainFinal.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.FormProductManager.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.MyUsrCtrl.MyUserControl.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlManagerReceiptNote.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlCategoryManager.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlDetailsProduct.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlProductManager.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.Properties.Resources.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.UsrCtrl.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlAppConfig.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.exe
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.pdb
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlAddReceiptNote.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlManagerDeliveryNote.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlReport.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlStatistics.resources
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\RdlCompile.cache
+D:\DHSG\Sincere\NamIV\HocKyII\Web\Cuoiky\App\obj\x86\Debug\RdlCompile.compiled
+E:\Misa\DoAnWebService-salipropham.blogspot.com\Nhom01\DoAnWebservice_SGU\App\bin\Debug\App.exe.config
+E:\Misa\DoAnWebService-salipropham.blogspot.com\Nhom01\DoAnWebservice_SGU\App\obj\x86\Debug\App.exe
+E:\Misa\DoAnWebService-salipropham.blogspot.com\Nhom01\DoAnWebservice_SGU\App\obj\x86\Debug\App.pdb
+F:\Master\DoAnWebservice_SGU\App\bin\Debug\App.exe.config
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.exe
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.pdb
+F:\Master\DoAnWebservice_SGU\App\bin\Debug\App.exe
+F:\Master\DoAnWebservice_SGU\App\bin\Debug\App.pdb
+F:\Master\DoAnWebservice_SGU\App\bin\Debug\Business.dll
+F:\Master\DoAnWebservice_SGU\App\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+F:\Master\DoAnWebservice_SGU\App\bin\Debug\Business.pdb
+F:\Master\DoAnWebservice_SGU\App\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.csprojResolveAssemblyReference.cache
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.FormAppConfig.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.FormCategoryManager.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.FormDetailsProduct.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.FormMain.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.FormMainFinal.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.FormProductManager.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.MyUsrCtrl.MyUserControl.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlManagerDeliveryNote.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlManagerReceiptNote.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlAddReceiptNote.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlCategoryManager.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlDetailsProduct.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlProductManager.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlReport.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlStatistics.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.Properties.Resources.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.UsrCtrl.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlAppConfig.resources
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\App.csproj.GenerateResource.Cache
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\RdlCompile.cache
+F:\Master\DoAnWebservice_SGU\App\obj\x86\Debug\RdlCompile.compiled
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\bin\Debug\App.exe.config
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.exe
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.pdb
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\bin\Debug\App.exe
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\bin\Debug\App.pdb
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\bin\Debug\Business.dll
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\bin\Debug\Business.pdb
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.csprojResolveAssemblyReference.cache
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.FormAppConfig.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.FormCategoryManager.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.FormDetailsProduct.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.FormMain.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.FormMainFinal.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.FormProductManager.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.MyUsrCtrl.MyUserControl.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlManagerDeliveryNote.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlManagerReceiptNote.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlAddReceiptNote.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlCategoryManager.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlDetailsProduct.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlProductManager.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlReport.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlStatistics.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.Properties.Resources.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.UsrCtrl.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.MyUsrCtrl.UsrCtrlAppConfig.resources
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\App.csproj.GenerateResource.Cache
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\RdlCompile.cache
+C:\Users\Thanh Tam\Documents\GitHub\WEBRTC\iShopSolution\App\obj\x86\Debug\RdlCompile.compiled

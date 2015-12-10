@@ -1,0 +1,22 @@
+﻿// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: ReceiptNoteDetail.cs
+// Solution: iShopSolution
+// Project: Business
+// Time: 2:19 PM 12/05/2012
+namespace Business.Entity
+{
+    public class ReceiptNoteDetail
+    {
+        public int Id { get; set; }
+        public int ProductId { get; set; }
+        public Product Product { get; set; }
+
+        public int ReceiptNoteId { get; set; }
+        public ReceiptNote ReceiptNote { get; set; }
+
+        public int Unit { get; set; }
+        public decimal CostPrice { get; set; }
+        public byte Repository { get; set; }
+    }
+}

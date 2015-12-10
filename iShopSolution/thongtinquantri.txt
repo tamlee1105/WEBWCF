@@ -1,0 +1,3 @@
+Webadmin: http://localhost:5056/admin/
+user: admin
+pass: 123

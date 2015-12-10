@@ -1,0 +1,171 @@
+﻿// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: Utils.cs
+// Solution: iShopSolution
+// Project: Business
+// Time: 8:08 PM 22/04/2012
+
+using System;
+using System.Data.Linq;
+using System.Linq;
+using Business.Entity;
+using Business.Database;
+namespace Business.Repository
+{
+    public static class Utils
+    {
+        public static IQueryable<Product> ConvertToProduct(this IQueryable<SanPham> sanPhams)
+        {
+            var result = from p in sanPhams
+                         let averPrice = p.GiaBinhQuans
+                                .Where(g => g.ThoiGian <= DateTime.Now)
+                                .OrderByDescending(g => g.ID).FirstOrDefault()
+                         where averPrice != null
+                         select new Product
+                                    {
+                                        Id = p.ID,
+                                        Code = p.MaSanPham,
+                                        Name = p.TenSanPham,
+                                        Category =
+                                            new Category
+                                                {
+                                                    Id = p.LoaiSanPham.ID,
+                                                    Code = p.LoaiSanPham.MaLoai,
+                                                    Name = p.LoaiSanPham.TenLoai
+                                                },
+                                        Description = p.MoTa,
+                                        Price = averPrice.GiaBinQuan ?? decimal.Zero,
+                                        Warranty = p.BaoHanh,
+                                        Image = p.Anh,
+                                        Inventory = averPrice.SoLuong ?? 0,
+                                        UpdateTime = averPrice.ThoiGian ?? DateTime.Now.AddYears(-1),
+                                        Recycle = p.Recycle ?? false
+
+                                    };
+            return result;
+        }
+
+        public static Product ConvertToProduct(this SanPham p)
+        {
+            var result = new Product
+                         {
+                             Id = p.ID,
+                             Code = p.MaSanPham,
+                             Name = p.TenSanPham,
+                             Category =
+                                 new Category
+                                 {
+                                     Id = p.LoaiSanPham.ID,
+                                     Code = p.LoaiSanPham.MaLoai,
+                                     Name = p.LoaiSanPham.TenLoai
+                                 },
+                             Description = p.MoTa,
+                             //Price = p.GiaBan ?? decimal.Zero,
+                             Warranty = p.BaoHanh,
+                             Image = p.Anh,
+                             //Inventory = p.SoTon ?? 0,
+                             Recycle = p.Recycle ?? false
+
+                         };
+            return result;
+        }
+
+        public static SanPham ConvertToSanPham(this Product product)
+        {
+            return new SanPham
+                       {
+                           ID = product.Id,
+                           MaSanPham = product.Code,
+                           TenSanPham = product.Name,
+                           IDLoaiSanPham = product.Category.Id,
+                           MoTa = product.Description,
+                           //GiaBan = product.Price,
+                           BaoHanh = product.Warranty,
+                           Anh = product.Image,
+                           //SoTon = product.Inventory,
+                           Recycle = product.Recycle
+                       };
+        }
+
+        public static ChiTietPhieuNhapHang ConvertToChiTietPhieuNhapHang(this ReceiptNoteDetail noteDetail)
+        {
+            return new ChiTietPhieuNhapHang
+                       {
+                           IDSanPham = noteDetail.ProductId,
+                           IDPhieuNhap = noteDetail.ReceiptNoteId,
+                           SoLuong = noteDetail.Unit,
+                           GiaVon = noteDetail.CostPrice,
+                           Kho = noteDetail.Repository
+                       };
+        }
+
+        public static PhieuNhapHang ConvertToPhieuNhapHang(this ReceiptNote note)
+        {
+            var listDetails = new EntitySet<ChiTietPhieuNhapHang>();
+            foreach (var detail in note.ReceiptNoteDetails)
+            {
+                listDetails.Add(detail.ConvertToChiTietPhieuNhapHang());
+            }
+            return new PhieuNhapHang
+                       {
+                           ThoiGianNhap = note.Date,
+                           TrangThai = note.Status,
+                           ChiTietPhieuNhapHangs = listDetails,
+                       };
+        }
+
+
+        public static Kho ConvertToKho(this MyRepo repo)
+        {
+            return new Kho
+                       {
+                           IDNhapXuat = repo.ReceiptDeliveryId,
+                           LaPhieuNhap = repo.IsReceipt,
+                           IDSanPham = repo.ProductId,
+                           SoLuongTonKho = repo.StockUnit,
+                           Kho1 = repo.Repository,
+                           ThoiGian = repo.Date,
+                           ConHang = repo.Inventory
+                       };
+        }
+
+        public static ReceiptNote ConvertToReceiptNote(this PhieuNhapHang phieu)
+        {
+            var notedetails = phieu.ChiTietPhieuNhapHangs
+                .Select(chitiet => new ReceiptNoteDetail
+                                       {
+                                           Id = chitiet.ID,
+                                           ProductId = chitiet.IDSanPham ?? 0,
+                                           Product = chitiet.SanPham.ConvertToProduct(),
+                                           Unit = chitiet.SoLuong ?? 0,
+                                           CostPrice = chitiet.GiaVon ?? decimal.Zero,
+                                           Repository = chitiet.Kho ?? 0
+                                       });
+            return new ReceiptNote
+                       {
+                           Id = phieu.ID,
+                           Date = phieu.ThoiGianNhap ?? DateTime.Now.AddYears(-1),
+                           Status = phieu.TrangThai ?? false,
+                           ReceiptNoteDetails = notedetails.ToList()
+                       };
+        }
+
+        public static WeightedAverageUnitPrice ConvertToAverUnitPrice(this GiaBinhQuan gia)
+        {
+            var averprice = new WeightedAverageUnitPrice
+                                {
+                                    Id = gia.ID,
+                                    AverageUnitPrice = gia.GiaBinQuan ?? decimal.Zero,
+                                    Units = gia.SoLuong ?? 0,
+                                    Date = gia.ThoiGian ?? DateTime.Now.AddYears(-1),
+                                    ProductId = gia.IDSanPham ?? 0,
+                                    Product = gia.SanPham.ConvertToProduct()
+                                };
+            averprice.Product.Inventory = averprice.Units;
+            averprice.Product.Price = averprice.AverageUnitPrice;
+            averprice.Product.UpdateTime = averprice.Date;
+
+            return averprice;
+        }
+    }
+}

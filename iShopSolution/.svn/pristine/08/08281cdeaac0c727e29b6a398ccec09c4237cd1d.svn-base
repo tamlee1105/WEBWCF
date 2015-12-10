@@ -1,0 +1,620 @@
+/*-----MENU SANPHAM LEFT ---------*/
+.CategoryMenu
+{
+	width: 183px;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+
+.CategoryMenu tbody tr
+{
+	background:url(../Images/arrow.gif) left no-repeat;
+	padding-left: 15px;
+	height:30px;
+}
+
+.CategoryMenu tbody tr td
+{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+	padding: 0 0 0 15px;
+	font-size: 14px;
+	width: 160px;
+}
+.CategoryMenu tbody tr td a
+{
+	color: #000; /*color: #666666;*/
+	text-decoration: none;
+}
+.CategoryMenu tbody tr td a:hover
+{
+	color: #007ed3;
+}
+
+/*----------TABLE THÔNG TIN KHÁCH HÀNG------------*/
+
+.tableCSS
+{
+	/*background: none repeat scroll 0 0 #F2F2F2;*/
+   /* border-top: 1px solid #CCCCCC;*/
+    padding: 10px 20px;
+	width: 734px;	
+}
+.tableCSS caption
+{
+	margin-left:10px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	text-align: center;
+	text-transform: uppercase;
+}
+	
+
+.tableCSS td.t {
+    color: #444444;
+    font-weight: bold;
+    padding: 12px 16px 12px 0;
+    text-align: right;
+    width: 128px;
+	vertical-align:top;
+}
+.tborder_c {
+    border-top: 1px solid #CCCCCC;
+}
+
+.tableCSS td.i {
+    padding: 12px 0;
+}
+.tableCSS .n
+{
+	width:200px;
+}
+.tableCSS .l {
+    width: 500px;
+}
+
+.tableCSS .text 
+{
+	color: #0000FF;
+	font-weight: bold;
+}
+
+/*---------------BUTTON--------------------*/
+input.send_button_link
+{
+	border: 1px solid #cccccc;
+	background: transparent url(../images/email_go.png) 10% 4px no-repeat;
+	padding: 4px 5px 4px 25px;	
+	font-size: 12px;
+	color: #666666;
+}
+
+input.send_button_link:hover
+{
+	text-decoration: none;
+	border: 1px solid #007ed3;
+	color: #007ed3;
+	cursor:pointer;
+	box-shadow:0 1px 2px rgba(0,0,0,0.3);
+}
+
+input.reset_button_link
+{
+	border: 1px solid #cccccc;
+	background: transparent url(../images/email_edit.png) 10% 4px no-repeat;
+	padding: 4px 5px 4px 25px;
+	font-size: 12px;
+	color: #666666;
+}
+input.reset_button_link:hover
+{
+	text-decoration: none;
+	border: 1px solid #007ed3;
+	color: #007ed3;
+	cursor:pointer;
+	box-shadow:0 1px 2px rgba(0,0,0,0.3);
+}
+
+/*----------SEARCH LEFL ---------------*/
+
+/*------- DropdownList -------*/
+.select_class
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #666;
+	border: 1px solid #007ed3;
+/*	margin-top:5px;*/
+	padding-left:5px;
+}
+
+
+input.quicksearch_button_link
+{
+	border: 1px solid #cccccc;
+	background: transparent url(../images/search.gif) 10% 4px no-repeat;
+	padding: 4px 5px 4px 25px;
+	font-size: 11px;	
+	color: #666666;	
+}
+input.quicksearch_button_link:hover
+{
+	text-decoration: none;
+	border: 1px solid #007ed3;
+	color: #007ed3;
+	cursor:pointer;
+	box-shadow:0 1px 2px rgba(0,0,0,0.3);
+}
+
+/*------ TABLE CONTENT------------*/
+.Product
+{
+	background:url(../images/bgpro.png) no-repeat center;
+	width: 200px;
+	height: 250px;
+	margin: 5px;
+	text-align: center;
+	float: left;
+	padding: 5px 15px 5px 15px;
+	font-family: Verdana, Tahoma, Arial, Times New Roman, Sans-Serif;
+	font-weight: bold;
+}
+
+.name a
+{
+
+	color: #007ED3;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration:none;
+}
+.name a:hover
+{
+	color: #23A4FF;
+}
+
+
+.images a img
+{
+	width:150px;
+	height:160px;	
+/*	margin-left:15px;*/
+	vertical-align:bottom;
+	padding-top:10px;
+}
+
+.price
+{
+	color:#F00;
+}
+.quantity
+{
+	color: #007ED3;
+	font-weight: bold;
+	font-size:12px;
+}
+.buynow
+{
+	background: url(../images/btn-buynow.png) center no-repeat;
+	width: 100px;
+	height: 26px;
+	cursor: pointer;
+	position: absolute;
+	text-align: center;
+	margin-left: 52px;
+	margin-top: 8px;
+}
+.buynow_spec
+{
+	background: url(../images/btn-buynow1.png) center no-repeat;
+	width: 100px;
+	height: 26px;
+	cursor: pointer;
+	position: absolute;
+	text-align: center;
+	margin-left: 52px;
+	margin-top: 8px;
+}
+
+#noPro
+{
+	margin:10px 0 10px 20px;
+	font-family: Verdana, Tahoma, Arial, Times New Roman, Sans-Serif;
+	font-weight: bold;
+	font-size:16px;
+	color:#F00;
+	text-align:center;
+}
+
+/*---------- TABLE MÔ TẢ SẢN PHẨM ---------------*/
+
+/*
+.image_product
+{
+	width: 150px;
+	height: 150px;
+	background: 
+	margin: 0px;
+	text-align: center;
+	float: left;
+}
+*/
+.image_laptop img
+{
+	width:180px;
+	height:225px;
+	margin:15px;
+}
+
+.details
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-top: 1px solid #BFBFBF;
+	width: 100%;
+}
+.details tbody tr 
+{
+	display: table-row;
+}
+.description
+{
+	background: #FAFAFA url(../images/column.jpg) repeat-y 0 0;
+	/*position: relative;*/
+	background: -webkit-gradient(linear, left top, left bottom, from(#F7F7F7), to(#EAEAEA));
+	width: 150px;
+	font-weight: bold;
+	padding: 10px 15px;
+	vertical-align: top;
+	border-bottom: 1px solid #BFBFBF;
+	border-left: 1px solid #BFBFBF;	
+}
+
+.info
+{
+	background: url(../images/column.jpg) repeat-y 0 0 ;
+	padding: 10px 15px;
+	vertical-align: top;
+	border-right: 1px solid #BFBFBF;
+	border-bottom: 1px solid #BFBFBF;
+	text-align:justify;
+	vertical-align:text-top;
+
+}
+
+/*----------------------------------------------
+			CONLECTION PAGE
+------------------------------------------------*/
+.ConlectionPage
+{
+	margin-top:15px;
+	text-align:center;
+	font: 12px/20px Tahoma;
+	
+}
+
+.ConlectionPage b
+{
+	font-weight: bold;
+	border: 1px solid #007ed3;
+	padding: 2px 5px;
+	color: #007ed3;
+}
+.ConlectionPage span span
+{
+	font-weight: bold;
+	border: 1px solid #007ed3;
+	padding: 2px 5px;
+	/*color: #007ed3;*/
+	color:#FFF;
+	background: #57A4FF url(../images/bg_01.jpg) no-repeat top center;
+}
+
+.ConlectionPage a
+{
+	font-weight: bold;
+	color: #666666;
+	border: 1px solid #cccccc;
+	padding: 2px 5px;
+	margin: 0px;
+	text-decoration: none;
+}
+
+.ConlectionPage a:hover
+{
+/*	color: #007ed3;*/
+	border: 1px solid #007ed3;
+	color:#FFF;
+	background: #57A4FF url(../images/bg_01.jpg) no-repeat top center;
+	
+}
+
+/*--------------------------------------------------
+		GIO HANG
+-----------------------------------------------------*/
+#GioHang
+{
+	position: relative;
+	width: 170px; /*marquee width */	
+	background-color: Transparent;
+	overflow: hidden;
+	padding: 2px;
+}
+
+.Sale
+{
+	text-align:center;
+	padding: 0px 10px 5px 1px;
+	margin-left:140px;;
+	
+}
+.Sale table tbody tr td
+{
+	/*padding-left:20px;*/
+}
+.btnSale
+{
+	 background: url(../images/btn_sales.gif) no-repeat scroll center center transparent;
+    border: 0 solid lightGrey;
+    color: #868686;
+    cursor: pointer;
+	width:113px;
+	height:27px;
+}
+.SoLuong
+{
+	text-align:center;
+	width:30px;
+}
+
+.Cart_Command
+{
+	background-color: #F2F2F2;
+	border-top: solid 4px darkGray;
+	margin: 0 0 15px 0;
+	padding: 10px 3px 10px 10px;
+}
+.btn
+{
+	float: left;
+	padding-top:3px;
+	width: 50%;
+}
+.btn input
+{
+	padding: 3px 0 3px 0;
+	border: solid 0px lightGrey;
+	background: transparent url(../images/bg_btn.gif) no-repeat;
+	background-position: center center;
+	width: 78px;
+	text-align: center;
+	cursor: pointer;
+	margin: 0 0 0 3px;
+	font-size: 8pt;
+	color: #868686;
+}
+.txt
+{
+	text-align: right;
+	padding-top: 5px;
+	margin-left: 60%;
+}
+.txt .to_txt
+{
+	font-weight: bold;
+	float: left;
+}
+
+.ListCart
+{
+	margin-top:20px;
+	border:none;
+}
+
+.table_center div table tr th
+{
+	/*background-color: darkGray;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F7F7F7), to(#EAEAEA));*/
+	border-right: white;
+	padding: 3px 0 3px 15px;
+	text-align: left;
+	font-weight:bold;
+	border-right: solid 1px white;
+	border-top: solid 2px #E1E1E1;
+	border-bottom: solid 1px #E1E1E1;
+}
+.table_center div table tr
+{
+	display: table-row;	
+	border-bottom: solid 1px #E1E1E1;
+}
+.CartLabel
+{
+	padding: 5px;
+}
+
+.Number
+{	
+	text-align:center;
+}
+.Price
+{
+	margin-right:10px;
+	text-align:right;
+}
+
+.CartLabel a
+{
+	color: #007ED3;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.ImgBtnDeleteCartItem
+{
+	width: 12px!important;
+	padding-left: 10px;
+	text-align: center;
+	vertical-align: middle;
+
+}
+.CartLabel a:hover
+{
+	color: #23A4FF;
+}
+
+.CartLabel input
+{
+	width:30px;
+	text-align: center;
+}
+
+.Cart
+{
+	color: #666;
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin-bottom:5px;
+}
+
+.Cart b
+{
+	color: red;
+}
+
+.TextCenter 
+{
+	text-align:center;
+	margin-top:5px;
+	
+}
+
+.tborder_c span
+{
+	font-weight:bold;
+}
+
+#home li.home, #about li.about
+{
+    font-weight:bold;
+}
+
+.table_result
+{
+	margin:5px;
+	width:720px;
+	border-bottom: 1px solid #BFBFBF;
+}
+.scroll-to-top-button
+{
+    background: #666 url(../images/Upload.png) center center no-repeat;
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    font-family: verdana;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    padding: 15px;
+    margin-top: 500px;
+	margin-right:20px
+	
+}
+.hot
+{
+	background:url(../images/hot.gif) no-repeat top right;
+	background-color: transparent;
+	height: 22px;
+	position: relative;
+	margin-bottom: -22px;
+	margin-right: 15px;	
+	z-index: 1;
+	
+}
+.new
+{
+	background:url(../images/new.gif) no-repeat top right;	
+	background-color: transparent;
+	height: 22px;
+	position: relative;
+	margin-bottom: -22px;
+	margin-right: 15px;	
+	z-index: 1;
+}
+
+
+
+
+
+/*ToolTip*/
+
+.div_tootip_content {
+    text-align: left;
+    width: 250px;
+}
+.div_tootip_content .div_ttp_title {
+    background-color: #F9EA8F;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 5px 5px 10px;
+}
+.div_tootip_content .ttp_price {
+	margin-top:5px;
+    color: Red;
+	text-align:center;
+}
+.div_tootip_content .div_ttp_pro_title, .div_tootip_content .div_ttp_pre_title {
+    background: url(../images/bg_t_promotion_4.gif) no-repeat scroll 10px center transparent;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 5px 3px 5px 25px;
+}
+.div_tootip_content .div_ttp_pre_title .number {
+    color: Red;
+}
+.div_tootip_content .div_ttp_pro_content ul, .div_tootip_content .div_fun_content ul {
+    margin: 0;
+    padding: 0;
+}
+.div_tootip_content .div_ttp_pro_content {
+    padding-left: 25px;
+}
+.div_tootip_content .div_ttp_pro_content ul li, .div_tootip_content .div_fun_content ul li {
+    list-style: none outside none;
+    margin: 0;
+    padding: 3px 2px 1px 25px;
+}
+.div_tootip_content .div_fun_content ul {
+    list-style-type: armenian;
+}
+.div_tootip_content .div_fun_title {
+    background: url(../images/bg_t_fun.gif) no-repeat scroll 10px center transparent;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 5px 3px 5px 25px;
+}
+
+/*-----------------LOGIN------------------------*/
+input.login_button_link
+{
+	border: 1px solid #cccccc;
+	background: transparent url(../images/search.gif) 10% 4px no-repeat;
+	padding: 4px 5px 4px 25px;
+	font-size: 11px;	
+	color: #666666;	
+}
+input.login_button_link:hover
+{
+	text-decoration: none;
+	border: 1px solid #007ed3;
+	color: #007ed3;
+	cursor:pointer;
+	box-shadow:0 1px 2px rgba(0,0,0,0.3);
+}

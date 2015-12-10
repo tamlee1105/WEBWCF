@@ -1,0 +1,21 @@
+// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: WeightedAverageUnitPrice.cs
+// Solution: iShopSolution
+// Project: Business
+// Time: 9:30 PM 12/05/2012
+
+using System;
+using System.Linq;
+using Business.Entity;
+
+namespace Business.IRepository
+{
+    public interface IWeightedAverageUnitPriceRepository
+    {
+        decimal GetPrice(int proId);
+        void Add(ReceiptNoteDetail noteDetail);
+        WeightedAverageUnitPrice Find(int proId, DateTime date);
+        void Submit();
+    }
+}

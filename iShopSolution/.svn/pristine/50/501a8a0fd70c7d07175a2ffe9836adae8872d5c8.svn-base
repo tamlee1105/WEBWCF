@@ -1,0 +1,138 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using Business.Entity;
+using Business.IRepository;
+using Business.Repository;
+
+namespace App.MyUsrCtrl
+{
+    public partial class UsrCtrlManagerReceiptNote : MyUserControl
+    {
+        private IReceiptNoteRepository _noteRepository;
+        private IEnumerable<ReceiptNote> _list;
+
+        private ReceiptNote _selectedItem;
+        public ReceiptNote SelectedItem
+        {
+            get { return _selectedItem; }
+            set
+            {
+                _selectedItem = value;
+                OnPropertyChanged("SelectedItem");
+            }
+        }
+
+        public UsrCtrlManagerReceiptNote()
+        {
+            InitializeComponent();
+
+            _noteRepository = new ReceiptNoteRepository();
+        }
+
+        
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            IsRemove = true;
+        }
+
+        private void UsrCtrlManagerReceiptNote_Load(object sender, EventArgs e)
+        {
+            Reload();
+        }
+
+        public void Reload()
+        {
+            LoadLstReceiptNote();
+            EmtySubItemlstDetails();
+        }
+
+        private void EmtySubItemlstDetails()
+        {
+            foreach (var item in lstDetails.Items.Cast<ListViewItem>())
+            {
+                item.SubItems.Add(string.Empty);
+            }
+        }
+
+
+        private void LoadLstReceiptNote()
+        {
+            _list = _noteRepository.GetAll();
+            lstNote.Items.Clear();
+
+            foreach (var note in _list)
+            {
+                var item = new ListViewItem(note.StrStatus) { Tag = note.Id };
+                item.SubItems.Add(String.Format("{0:dd/MM/yyyy HH:mm:ss}", note.Date));
+                item.SubItems.Add(note.ReceiptNoteDetails
+                                .Count().ToString(CultureInfo.InvariantCulture));
+                item.SubItems.Add(note.ReceiptNoteDetails
+                                .Sum(d => d.Unit).ToString(CultureInfo.InvariantCulture));
+                lstNote.Items.Add(item);
+            }
+        }
+
+        private void lstNote_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstNote.SelectedItems.Count < 1) return;
+
+            var item = lstNote.SelectedItems[0];
+            if (item == null) return;
+
+            var noteId = (int)item.Tag;
+            var note = _list.FirstOrDefault(n => n.Id == noteId);
+            if (note == null) return;
+
+            lstDetails.Tag = noteId;
+            for (var i = 0; i < lstDetails.Items.Count; i++)
+            {
+                lstDetails.Items[i].SubItems[1].Text = item.SubItems[i].Text;
+            }
+
+            LoadLstNoteDetails(note.ReceiptNoteDetails);
+        }
+
+        private void LoadLstNoteDetails(IEnumerable<ReceiptNoteDetail> list)
+        {
+            if (list == null) return;
+            lstNoteDetail.Items.Clear();
+            foreach (var noteDetail in list)
+            {
+                var item = new ListViewItem(noteDetail.Product.Name);
+                item.SubItems.Add(string.Format("{0:0,0}", noteDetail.Unit));
+                item.SubItems.Add(string.Format("{0:0,0}", noteDetail.CostPrice));
+                item.SubItems.Add(noteDetail.Repository == 1 ? "A" : "B");
+                lstNoteDetail.Items.Add(item);
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadLstReceiptNote();
+            EmtySubItemlstDetails();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if(lstDetails.Tag==null)
+            {
+                SelectedItem = null;
+                return;
+            }
+            var noteId = (int)lstDetails.Tag;
+            var note = _list.FirstOrDefault(n => n.Id == noteId);
+            if (note == null) return;
+
+            SelectedItem = note.Status ? null : note;
+
+        }
+    }
+}

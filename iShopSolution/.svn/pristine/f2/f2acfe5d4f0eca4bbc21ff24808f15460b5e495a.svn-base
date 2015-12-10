@@ -1,0 +1,62 @@
+﻿// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: Repository.cs
+// Solution: iShopSolution
+// Project: Website
+// Time: 6:32 PM 13/05/2012
+
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using Website.ShopService;
+
+namespace Website.Code
+{
+    public class Repository
+    {
+        public static double XPercent { get { return 0.2; } }
+
+        public static Product[] GetProductsByCate(int cateId)
+        {
+            var service = Utils.Service;
+            var list = service.GetByCate(cateId);
+            foreach (var product in list)
+            {
+                product.Price = (decimal)(((double)product.Price) * (1 + XPercent));
+                product.StrPrice = string.Format("{0:0,0 VND}", product.Price);
+            }
+            return list;
+        }
+
+        public static Product GetProduct(int proId)
+        {
+            try
+            {
+                var service = Utils.Service;
+                var product = service.GetProduct(proId);
+                product.Price = (decimal)(((double)product.Price) * (1 + XPercent));
+                product.StrPrice = string.Format("{0:0,0 VND}", product.Price);
+                return product;
+            }
+            catch (Exception exception)
+            {
+                Debug.WriteLine("Repository - Get Product: "+exception.Message);
+                return null;
+            }
+            
+        }
+
+        public static Product[] Find(string proName, int cateId)
+        {
+            var service = Utils.Service;
+            var list = service.Find(proName, cateId);
+            foreach (var product in list)
+            {
+                product.Price = (decimal)(((double)product.Price) * (1 + XPercent));
+                product.StrPrice = string.Format("{0:0,0 VND}", product.Price);
+            }
+            return list;
+        }
+    }
+}

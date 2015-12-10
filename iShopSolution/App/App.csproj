@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6ABDCBE9-7519-4F39-9E2A-6E997DBBF37E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App</RootNamespace>
+    <AssemblyName>App</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Apple.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAppConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAppConfig.Designer.cs">
+      <DependentUpon>FormAppConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCategoryManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCategoryManager.Designer.cs">
+      <DependentUpon>FormCategoryManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetailsProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailsProduct.Designer.cs">
+      <DependentUpon>FormDetailsProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainFinal.Designer.cs">
+      <DependentUpon>FormMainFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductManager.Designer.cs">
+      <DependentUpon>FormProductManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUsrCtrl\MyUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUsrCtrl\MyUserControl.Designer.cs">
+      <DependentUpon>MyUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlManagerDeliveryNote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlManagerDeliveryNote.Designer.cs">
+      <DependentUpon>UsrCtrlManagerDeliveryNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlManagerReceiptNote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlManagerReceiptNote.Designer.cs">
+      <DependentUpon>UsrCtrlManagerReceiptNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlAddReceiptNote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlAddReceiptNote.Designer.cs">
+      <DependentUpon>UsrCtrlAddReceiptNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlCategoryManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlCategoryManager.Designer.cs">
+      <DependentUpon>UsrCtrlCategoryManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlDetailsProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlDetailsProduct.Designer.cs">
+      <DependentUpon>UsrCtrlDetailsProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlProductManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlProductManager.Designer.cs">
+      <DependentUpon>UsrCtrlProductManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlReport.Designer.cs">
+      <DependentUpon>UsrCtrlReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlStatistics.Designer.cs">
+      <DependentUpon>UsrCtrlStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportView.cs" />
+    <Compile Include="Service\IShopService.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ShopService.cs" />
+    <Compile Include="UsrCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsrCtrl.Designer.cs">
+      <DependentUpon>UsrCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlAppConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUsrCtrl\UsrCtrlAppConfig.Designer.cs">
+      <DependentUpon>UsrCtrlAppConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs" />
+    <EmbeddedResource Include="FormAppConfig.resx">
+      <DependentUpon>FormAppConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCategoryManager.resx">
+      <DependentUpon>FormCategoryManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailsProduct.resx">
+      <DependentUpon>FormDetailsProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainFinal.resx">
+      <DependentUpon>FormMainFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductManager.resx">
+      <DependentUpon>FormProductManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUsrCtrl\MyUserControl.resx">
+      <DependentUpon>MyUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUsrCtrl\UsrCtrlManagerDeliveryNote.resx">
+      <DependentUpon>UsrCtrlManagerDeliveryNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUsrCtrl\UsrCtrlManagerReceiptNote.resx">
+      <DependentUpon>UsrCtrlManagerReceiptNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUsrCtrl\UsrCtrlAddReceiptNote.resx">
+      <DependentUpon>UsrCtrlAddReceiptNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUsrCtrl\UsrCtrlCategoryManager.resx">
+      <DependentUpon>UsrCtrlCategoryManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUsrCtrl\UsrCtrlDetailsProduct.resx">
+      <DependentUpon>UsrCtrlDetailsProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUsrCtrl\UsrCtrlProductManager.resx">
+      <DependentUpon>UsrCtrlProductManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUsrCtrl\UsrCtrlReport.resx">
+      <DependentUpon>UsrCtrlReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUsrCtrl\UsrCtrlStatistics.resx">
+      <DependentUpon>UsrCtrlStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\rptReceiptDelivery.rdlc" />
+    <EmbeddedResource Include="UsrCtrl.resx">
+      <DependentUpon>UsrCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUsrCtrl\UsrCtrlAppConfig.resx">
+      <DependentUpon>UsrCtrlAppConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\App.Report.ReceiptDelivery.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{15DBF035-1614-480A-A647-38E9D33A7BF1}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-open-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\format-justify-left-last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webbrowser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Apple.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

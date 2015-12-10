@@ -1,0 +1,162 @@
+﻿// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: ProductRepository.cs
+// Solution: iShopSolution
+// Project: Business
+// Time: 8:00 PM 22/04/2012
+
+using System;
+using System.Diagnostics;
+using System.Linq;
+using Business.Database;
+using Business.Entity;
+using Business.IRepository;
+
+namespace Business.Repository
+{
+    public class ProductRepository : IProductRepository
+    {
+        private ShopDataContext _data = ShopData.DataContext;
+
+        #region Implementation of IProductRepository
+
+        /// <summary>
+        /// Get all items product in database
+        /// </summary>
+        /// <returns>List all items</returns>
+        public IQueryable<Product> GetAll()
+        {
+            return _data.SanPhams.ConvertToProduct();
+        }
+
+        public Product Find(int proId)
+        {
+            //return _data.SanPhams.First(p => p.ID == proId).ConvertToProduct();
+            return GetAll().FirstOrDefault(p => p.Id == proId);
+        }
+
+        /// <summary>
+        /// Find all items by product name and category Id.
+        /// Default category hidden, at times will find by product name
+        /// </summary>
+        /// <param name="productName">Name of product</param>
+        /// <param name="cateId">Category Id</param>
+        /// <returns>List items product</returns>
+        public IQueryable<Product> Find(string productName, int cateId = 0)
+        {
+            if (productName == null) productName = string.Empty;
+            var list = cateId == 0 ? GetAll() : GetByCate(cateId);
+            return list.Where(p => p.Name.Contains(productName));
+
+        }
+
+        ///// <summary>
+        ///// Find all items by product name
+        ///// </summary>
+        ///// <param name="productName">Name of product</param>
+        ///// <returns>List items product</returns>
+        //public IQueryable<Product> Find(string productName)
+        //{
+        //    return _data.SanPhams.Where(p => p.TenSanPham.Contains(productName)).ConvertToProduct();
+        //}
+
+
+
+        /// <summary>
+        /// Get all items products by category Id
+        /// </summary>
+        /// <param name="cateId">Id of category</param>
+        /// <returns>List items products</returns>
+        public IQueryable<Product> GetByCate(int cateId)
+        {
+            return _data.SanPhams.Where(p => p.IDLoaiSanPham == cateId).ConvertToProduct();
+        }
+
+        /// <summary>
+        /// Add product in a pending  insert states to Data context
+        /// </summary>
+        /// <param name="product">Product insert to database</param>
+        /// <returns>TRUE if success </returns>
+        public bool Add(Product product)
+        {
+            try
+            {
+                var sp = product.ConvertToSanPham();
+                _data.SanPhams.InsertOnSubmit(sp);
+                return true;
+            }
+            catch (Exception exception)
+            {
+                Debug.WriteLine("Add product: " + exception.Message);
+                return false;
+            }
+
+        }
+
+        /// <summary>
+        /// Update product in a pending state
+        /// </summary>
+        /// <param name="product">Product to update</param>
+        /// <returns>TRUE if success</returns>
+        public bool Edit(Product product)
+        {
+            try
+            {
+                var updateItem = _data.SanPhams.First(p => p.ID == product.Id);
+
+                updateItem.ID = product.Id;
+                updateItem.MaSanPham = product.Code;
+                updateItem.TenSanPham = product.Name;
+                updateItem.IDLoaiSanPham = product.Category.Id;
+                updateItem.MoTa = product.Description;
+                //updateItem.GiaBan = product.Price;
+                updateItem.BaoHanh = product.Warranty;
+                updateItem.Anh = product.Image;
+                //updateItem.SoTon = product.Inventory;
+                updateItem.Recycle = product.Recycle;
+
+                return true;
+            }
+            catch (Exception exception)
+            {
+                Debug.WriteLine("Edit product: " + exception.Message);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Puts a product from this table into a pending delete state 
+        /// </summary>
+        /// <param name="productId">product id of delete product</param>
+        /// <returns>TRUE if success</returns>
+        public bool Delete(int productId)
+        {
+            try
+            {
+                var delItem = _data.SanPhams.First(p => p.ID == productId);
+                _data.SanPhams.DeleteOnSubmit(delItem);
+                return true;
+            }
+            catch (Exception exception)
+            {
+                Debug.WriteLine("Delete product: " + exception.Message);
+                return false;
+            }
+        }
+
+        public void Commit()
+        {
+            _data.SubmitChanges();
+        }
+
+        public void Refresh()
+        {
+            _data.Dispose();
+            _data = ShopData.DataContext;
+        }
+
+        #endregion
+
+
+    }
+}

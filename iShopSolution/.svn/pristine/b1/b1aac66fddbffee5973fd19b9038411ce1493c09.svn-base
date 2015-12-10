@@ -1,0 +1,20 @@
+﻿// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: Utils.cs
+// Solution: iShopSolution
+// Project: Website
+// Time: 7:43 PM 23/04/2012
+
+using Website.ShopService;
+
+namespace Website.Code
+{
+    public static class Utils
+    {
+        //Service client
+        public static ShopServiceClient Service
+        {
+            get { return new ShopServiceClient(); }
+        }
+    }
+}

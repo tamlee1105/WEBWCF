@@ -1,0 +1,24 @@
+﻿// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: MyRepo.cs
+// Solution: iShopSolution
+// Project: Business
+// Time: 10:12 PM 12/05/2012
+
+using System;
+
+namespace Business.Entity
+{
+    public class MyRepo
+    {
+        public int Id { get; set; }
+        public int ReceiptDeliveryId { get; set; }
+        public bool IsReceipt { get; set; }
+        public int ProductId { get; set; }
+        public Product Product { get; set; }
+        public int StockUnit { get; set; }
+        public byte Repository { get; set; }
+        public DateTime Date { get; set; }
+        public int Inventory { get; set; }
+    }
+}

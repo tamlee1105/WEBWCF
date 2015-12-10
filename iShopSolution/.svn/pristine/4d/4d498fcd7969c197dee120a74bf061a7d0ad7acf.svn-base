@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8619BBA-92D1-4F10-BDD1-7989068A23A4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Website</RootNamespace>
+    <AssemblyName>Website</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\iShopService\Website\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="wpCumulus">
+      <HintPath>..\..\iShopService\Website\bin\wpCumulus.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\Default.aspx" />
+    <Content Include="admin\login.aspx" />
+    <Content Include="Css\Asp.css" />
+    <Content Include="Css\IE7.css" />
+    <Content Include="Css\Main.css" />
+    <Content Include="Css\New folder\Carousel.css" />
+    <Content Include="Css\New folder\highslide.css" />
+    <Content Include="Css\New folder\IE7.css" />
+    <Content Include="Css\New folder\jQuery_Slider.css" />
+    <Content Include="Css\New folder\pushup.css" />
+    <Content Include="Css\nivo-slider.css" />
+    <Content Include="Css\xbreadcrumbs.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\arrow.gif" />
+    <Content Include="images\arrow.png" />
+    <Content Include="images\arrows.png" />
+    <Content Include="images\arrow_up.png" />
+    <Content Include="images\bg-banner-top.png" />
+    <Content Include="images\bgpro.png" />
+    <Content Include="images\bg_01.jpg" />
+    <Content Include="images\bg_btn.gif" />
+    <Content Include="images\bg_content.gif" />
+    <Content Include="images\bg_menu.gif" />
+    <Content Include="images\bg_tille_center.gif" />
+    <Content Include="images\bg_top.gif" />
+    <Content Include="images\bg_t_fun.gif" />
+    <Content Include="images\bg_t_promotion_4.gif" />
+    <Content Include="images\body_bg20110426.png" />
+    <Content Include="images\btn-buynow.png" />
+    <Content Include="images\btn-buynow1.png" />
+    <Content Include="images\btn_sales.gif" />
+    <Content Include="images\bullets.png" />
+    <Content Include="images\center_but.jpg" />
+    <Content Include="images\column.jpg" />
+    <Content Include="images\content_but.jpg" />
+    <Content Include="images\content_top.jpg" />
+    <Content Include="images\detail.png" />
+    <Content Include="images\Driver.gif" />
+    <Content Include="images\Email.jpg" />
+    <Content Include="images\email_edit.png" />
+    <Content Include="images\email_go.png" />
+    <Content Include="images\footer-bg.gif" />
+    <Content Include="images\graphics\close.png" />
+    <Content Include="images\graphics\closeX.png" />
+    <Content Include="images\graphics\controlbar-black-border.gif" />
+    <Content Include="images\graphics\controlbar-text-buttons.png" />
+    <Content Include="images\graphics\controlbar-white-small.gif" />
+    <Content Include="images\graphics\controlbar-white.gif" />
+    <Content Include="images\graphics\fullexpand.gif" />
+    <Content Include="images\graphics\icon.gif" />
+    <Content Include="images\graphics\index.html" />
+    <Content Include="images\graphics\loader.white.gif" />
+    <Content Include="images\graphics\resize.gif" />
+    <Content Include="images\graphics\scrollarrows.png" />
+    <Content Include="images\hot.gif" />
+    <Content Include="images\hot2.gif" />
+    <Content Include="images\icon\back.gif" />
+    <Content Include="images\icon\print.gif" />
+    <Content Include="images\icon\save.gif" />
+    <Content Include="images\icon\send.gif" />
+    <Content Include="images\icon\top.gif" />
+    <Content Include="images\icon_delete.gif" />
+    <Content Include="images\image_bg.gif" />
+    <Content Include="images\load.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\menu_line.jpg" />
+    <Content Include="images\nav-bg.png" />
+    <Content Include="images\nav.html" />
+    <Content Include="images\new.gif" />
+    <Content Include="images\OrderStepPromotion.png" />
+    <Content Include="images\otherNew_line.gif" />
+    <Content Include="images\PriceList.gif" />
+    <Content Include="images\product-topsale.png" />
+    <Content Include="images\search.gif" />
+    <Content Include="images\silde-nav.png" />
+    <Content Include="images\support_but.jpg" />
+    <Content Include="images\support_top.jpg" />
+    <Content Include="images\sys\closed.gif" />
+    <Content Include="images\sys\load.gif" />
+    <Content Include="images\sys\open.gif" />
+    <Content Include="images\table_header_bg.gif" />
+    <Content Include="images\tille.jpg" />
+    <Content Include="images\tille_but.jpg" />
+    <Content Include="images\tille_colum2.jpg" />
+    <Content Include="images\tooltip_header_bg.gif" />
+    <Content Include="images\Upload.png" />
+    <Content Include="Js\Commons.js" />
+    <Content Include="Js\FreeTextBox\Utility\spacer.html" />
+    <Content Include="Js\highslide-with-gallery.js" />
+    <Content Include="Js\jquery-1.4.3.min.js" />
+    <Content Include="Js\jquery.js" />
+    <Content Include="Js\jquery.min.js" />
+    <Content Include="Js\jquery.nivo.slider.js" />
+    <Content Include="Js\jquery.nivo.slider.pack.js" />
+    <Content Include="Js\Marquee.js" />
+    <Content Include="Js\pushup.js" />
+    <Content Include="Js\swfobject.js" />
+    <Content Include="Js\wz_tooltip.js" />
+    <Content Include="laptop.ico" />
+    <Content Include="manager\Default.aspx" />
+    <Content Include="MaterPage.Master" />
+    <Content Include="admin\Manager.Master" />
+    <None Include="Service References\ShopService\ShopService.disco" />
+    <None Include="Service References\ShopService\configuration91.svcinfo" />
+    <None Include="Service References\ShopService\configuration.svcinfo" />
+    <None Include="Service References\ShopService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="ProductDetails.aspx" />
+    <Content Include="Products.aspx" />
+    <Content Include="Search.aspx" />
+    <Content Include="ShoppingCart.aspx" />
+    <Content Include="Upload\Banner\ipad.jpg" />
+    <Content Include="Upload\Banner\ipad1.jpg" />
+    <Content Include="Upload\Banner\iphone4s.jpg" />
+    <Content Include="Upload\Banner\iphone4s1.jpg" />
+    <Content Include="Upload\Banner\ipodtoch.jpg" />
+    <Content Include="Upload\Banner\macbookair.jpg" />
+    <Content Include="Upload\Banner\macbookair1.jpg" />
+    <Content Include="Upload\Banner\macbookpro.jpg" />
+    <Content Include="Upload\Banner\right1.jpg" />
+    <Content Include="Upload\Banner\right2.jpg" />
+    <Content Include="UserControl\Basket.ascx" />
+    <Content Include="UserControl\CategoryMenu.ascx" />
+    <Content Include="UserControl\CloudTag.ascx" />
+    <Content Include="UserControl\Products.ascx" />
+    <Content Include="UserControl\Search.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Service References\ShopService\ShopService.wsdl" />
+    <None Include="Service References\ShopService\ShopService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShopService\ShopService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShopService\Website.ShopService.Category.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShopService\Website.ShopService.DeliveryNote.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShopService\Website.ShopService.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShopService\Website.ShopService.WeightedAverageUnitPrice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Manager.Master.cs">
+      <DependentUpon>Manager.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Manager.Master.designer.cs">
+      <DependentUpon>Manager.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Entity\Cart.cs" />
+    <Compile Include="Code\Entity\Customer.cs" />
+    <Compile Include="Code\Entity\User.cs" />
+    <Compile Include="Code\Entity\OrderDetail.cs" />
+    <Compile Include="Code\Entity\Stock.cs" />
+    <Compile Include="Code\Extension.cs" />
+    <Compile Include="Code\Authentication.cs" />
+    <Compile Include="Code\Repository.cs" />
+    <Compile Include="Code\ShoppingCart.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="manager\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterPage.Master.cs">
+      <DependentUpon>MaterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterPage.Master.designer.cs">
+      <DependentUpon>MaterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ShopService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Basket.ascx.cs">
+      <DependentUpon>Basket.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Basket.ascx.designer.cs">
+      <DependentUpon>Basket.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CategoryMenu.ascx.cs">
+      <DependentUpon>CategoryMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CategoryMenu.ascx.designer.cs">
+      <DependentUpon>CategoryMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CloudTag.ascx.cs">
+      <DependentUpon>CloudTag.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CloudTag.ascx.designer.cs">
+      <DependentUpon>CloudTag.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Products.ascx.cs">
+      <DependentUpon>Products.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Products.ascx.designer.cs">
+      <DependentUpon>Products.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Search.ascx.cs">
+      <DependentUpon>Search.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Search.ascx.designer.cs">
+      <DependentUpon>Search.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ShopService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ShopService\ShopService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5056</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,36 @@
+﻿// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: ReceiptNoteDetailRepository.cs
+// Solution: iShopSolution
+// Project: Business
+// Time: 2:31 PM 12/05/2012
+
+using Business.Database;
+using Business.Entity;
+using Business.IRepository;
+
+namespace Business.Repository
+{
+    public class ReceiptNoteDetailRepository : IReceiptNoteDetailRepository
+    {
+        private ShopDataContext _data = ShopData.DataContext;
+
+        #region Implementation of IReceiptNoteDetailRepository
+
+        public void Add(ReceiptNoteDetail receiptNoteDetail)
+        {
+            var chitiet = receiptNoteDetail.ConvertToChiTietPhieuNhapHang();
+
+            _data.ChiTietPhieuNhapHangs.InsertOnSubmit(chitiet);
+            Submit();
+            receiptNoteDetail.Id = chitiet.ID;
+        }
+
+        public void Submit()
+        {
+            _data.SubmitChanges();
+        }
+
+        #endregion
+    }
+}

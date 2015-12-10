@@ -1,0 +1,86 @@
+﻿// Copyright: 2012 
+// Author: Minh Vu - YoungJ
+// File name: WeightedAverageUnitPriceRepository.cs
+// Solution: iShopSolution
+// Project: Business
+// Time: 9:31 PM 12/05/2012
+
+using System;
+using System.Diagnostics;
+using System.Linq;
+using Business.Database;
+using Business.Entity;
+using Business.IRepository;
+
+namespace Business.Repository
+{
+    public class WeightedAverageUnitPriceRepository : IWeightedAverageUnitPriceRepository
+    {
+
+        private ShopDataContext _data = ShopData.DataContext;
+
+
+        //private IMyRepository _myRepository = new MyRepository();
+        //private IWeightedAverageUnitPriceRepository _wAUPRepository = new WeightedAverageUnitPriceRepository();
+        #region Implementation of IWeightedAverageUnitPriceRepository
+
+        public decimal GetPrice(int proId)
+        {
+            try
+            {
+                var price = _data.GiaBinhQuans
+                                        .Where(p => p.IDSanPham == proId)
+                                        .OrderByDescending(p => p.ID)
+                                        .FirstOrDefault();
+                if (price != null)
+                {
+                    if (price.GiaBinQuan != null) return (decimal)price.GiaBinQuan;
+                }
+            }
+            catch (Exception exception)
+            {
+                Debug.WriteLine("Get Price: " + exception.Message);
+            }
+            return 0;
+
+        }
+
+        public void Add(ReceiptNoteDetail noteDetail)
+        {
+
+            var _myRepository = new MyRepository();
+            var _wAUPRepository = new WeightedAverageUnitPriceRepository();
+
+            // update weigthed average unit price 
+            var unitInRepo = _myRepository.GetUnitProductAllRepository(noteDetail.ProductId);
+            var averPrice = _wAUPRepository.GetPrice(noteDetail.ProductId);
+
+            decimal newprice;
+            if (unitInRepo == 0 || averPrice == 0)
+            {
+                newprice = noteDetail.CostPrice;
+            }
+            else
+            {
+                newprice = ((unitInRepo * averPrice) + (noteDetail.Unit * noteDetail.CostPrice)) /
+                           (unitInRepo + noteDetail.Unit);
+            }
+
+            var giabinhquan = new GiaBinhQuan
+                                  {
+                                      GiaBinQuan = newprice,
+                                      ThoiGian = DateTime.Now,
+                                      IDSanPham = noteDetail.ProductId
+                                  };
+            _data.GiaBinhQuans.InsertOnSubmit(giabinhquan);
+            Submit();
+        }
+
+        public void Submit()
+        {
+            _data.SubmitChanges();
+        }
+
+        #endregion
+    }
+}

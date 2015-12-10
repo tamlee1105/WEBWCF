@@ -1,0 +1,294 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MaterPage.master.cs" Inherits="Website.MaterPage" %>
+
+<%@ Register src="UserControl/CategoryMenu.ascx" tagname="CategoryMenu" tagprefix="uc1" %>
+
+<%@ Register src="UserControl/Search.ascx" tagname="Search" tagprefix="uc2" %>
+
+<%@ Register src="UserControl/CloudTag.ascx" tagname="CloudTag" tagprefix="uc3" %>
+
+<%@ Register src="UserControl/Basket.ascx" tagname="Basket" tagprefix="uc4" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <link rel="shortcut icon" href="laptop.ico" />
+    <link href="Css/Main.css" rel="stylesheet" type="text/css" />
+    <link href="Css/Asp.css" rel="Stylesheet" type="text/css" />
+    <link href="Css/IE7.css" rel="Stylesheet" type="text/css" />    
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="Js/Commons.js"></script>
+
+    <script type="text/javascript" src="Js/pushup.js"></script>
+
+    <script type="text/javascript" src="Js/jquery.js"></script>
+
+    <script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+    
+    <script type="text/javascript">
+        //SLICESHOW
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                effect: 'random', //Specify sets like: 'fold,fade,sliceDown,random'
+                slices: 15,
+                animSpeed: 500, //Slide transition speed
+                pauseTime: 4000,
+                startSlide: 0, //Set starting Slide (0 index)
+                directionNav: true, //Next & Prev
+                directionNavHide: false, //Only show on hover
+                controlNav: true, //1,2,3...
+                controlNavThumbs: false, //Use thumbnails for Control Nav
+                controlNavThumbsFromRel: false, //Use image rel for thumbs
+                controlNavThumbsSearch: '.jpg', //Replace this with...
+                controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+                keyboardNav: true, //Use left & right arrows
+                pauseOnHover: true, //Stop animation while hovering
+                manualAdvance: false, //Force manual transitions
+                captionOpacity: 0.8, //Universal caption opacity
+                beforeChange: function () { },
+                afterChange: function () { },
+                slideshowEnd: function () { }, //Triggers after all slides have been shown
+                lastSlide: function () { }, //Triggers when last slide is shown
+                afterLoad: function () { } //Triggers when slider has loaded
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var url = new String(window.location);
+            url = url.substring(url.lastIndexOf("/") + 1);
+            $('.current').removeClass('current');
+            $('li').find("a[href='" + url + "']").parent().addClass('current');
+        });
+
+        (function (jq) {
+            jq.autoScroll = function (ops) {
+                ops = ops || {};
+                ops.styleClass = ops.styleClass || 'scroll-to-top-button';
+                var t = jq('<div class="' + ops.styleClass + '"></div>'),
+            d = jq(ops.target || document);
+                jq(ops.container || 'body').append(t);
+
+                t.css({
+                    opacity: 0,
+                    position: 'fixed',
+                    top: 0,
+                    right: -15
+                }).click(function () {
+                    jq('html,body').animate({
+                        scrollTop: 0
+                    }, ops.scrollDuration || 1000);
+                });
+
+                d.scroll(function () {
+                    var sv = d.scrollTop();
+                    if (sv < 10) {
+                        t.clearQueue().fadeOut(ops.hideDuration || 200);                
+                        return;
+                    }
+
+                    t.css('display', '').clearQueue().animate({
+                        top: 110,
+                        opacity: 0.8
+                    }, ops.showDuration || 200);
+                });
+            };
+        })(jQuery);
+
+
+        $(document).ready(function () {
+            $.autoScroll({
+                scrollDuration: 400,
+                showDuration: 300,
+                hideDuration: 300
+            });
+        });
+    </script>
+</head>
+<body>
+   <script type="text/javascript" src="Js/wz_tooltip.js"></script>
+    <form id="main" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <!-- Header -->
+    <div id="container">
+        <div id="menu-container-user">
+            <div class="fx">
+                <div style="float: left; color: #999999;">
+                    Chào mừng các bạn đến với showroom <b>iShop</b></div>
+            </div>
+        </div>
+        <div class="bg_top_banner">
+            <div class="banner">
+                <div>
+                    <a href="#">
+                        <img src="images/logo.png" alt="" width="166px" height="80px" /></a></div>
+            </div>
+            <div class="clear">
+            </div>
+            <!--menu-->
+            <div class="top">
+                <ul class="topMenu">
+                    <li class="current"><a href="Default.aspx">Trang chủ</a></li>
+                    <li><a href="Products.aspx">Sản Phẩm</a></li>
+                    <li><a href="Search.aspx">Tìm kiếm</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+    <div class="bg_m">
+    </div>
+    <div id="slider-wrapper">
+        <div id="slider" class="nivoSlider">
+            <a href='#' target='_blank'>
+                <img src="Upload/Banner/iphone4s.jpg" alt='' /></a> <a href='#' target='_blank'>
+                    <img src="Upload/Banner/ipodtoch.jpg" alt='' /></a> <a href='#' target='_blank'>
+                        <img src='Upload/Banner/macbookair.jpg' alt='' /></a> <a href='#' target='_blank'>
+                            <img src='Upload/Banner/macbookair1.jpg' alt='' /></a> <a href='#' target='_blank'>
+                                <img src='Upload/Banner/macbookpro.jpg' alt='' /></a> <a href='#' target='_blank'>
+                                    <img src='Upload/Banner/ipad.jpg' alt='' /></a> <a href='#' target='_blank'>
+                                        <img src='Upload/Banner/ipad1.jpg' alt='' /></a> <a href='#' target='_blank'>
+                                            <img src="Upload/Banner/iphone4s1.jpg" alt='' /></a>
+        </div>
+    </div>
+    <!--End Header-->
+    <!-- Content -->
+    <div class="content">
+        <div class="content_top">
+        </div>
+        <div class="clear">
+        </div>
+        <div class="table">
+            <!-- colum left -->
+            <div id="colum1">
+                <!-- Laptop Cate -->
+                <div>
+                    <div class="tille">
+                        Sản phẩm</div>
+                    <div class="menuleft">
+                        <asp:ContentPlaceHolder ID="CPH" runat="server">
+                            
+                            <uc1:CategoryMenu ID="CategoryMenu1" runat="server" />
+                            
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="butleft">
+                    </div>
+                </div>
+                <div>
+                    <!----- Gio hang --->
+                    <asp:ContentPlaceHolder ID="CPHGioHang" runat="server">
+                        
+                        <uc4:Basket ID="Basket1" runat="server" />
+                        
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!-- Quick search -->
+                <div>
+                    <div class="tille">
+                        Tìm kiếm nhanh</div>
+                    <div class="menuleft">
+                        <asp:ContentPlaceHolder ID="CPHSearch" runat="server">
+                            
+                            <uc2:Search ID="Search1" runat="server" />
+                            
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="butleft">
+                    </div>
+                </div>
+                <div class="support">
+                    <!-- Support -->
+                    <div class="tille">
+                        Hổ trợ trực tuyến</div>
+                    <div class="menuleft">
+                        <table id="ctl00_ctl18_tblList" border="0" cellpadding="0" cellspacing="5" width="100%">
+                            <tr>
+                                <td align="center">
+                                    <b>Developer</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <a href='ymsgr:sendIM?boi_kute_1805&m=<i>Hổ trợ trực tuyến</i>'>
+                                        <img border='0' src='http://opi.yahoo.com/online?u=boi_kute_1805&m=g&t=2' alt='' /></a><br />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="support_but">
+                    </div>
+                </div>
+                <div>
+                    <!-- News -->
+                    <div class="tille">
+                        Mây sản phẩm</div>
+                    <div class="menuleft">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            <div id="marqueecontainer">
+                                
+                                <uc3:CloudTag ID="CloudTag1" runat="server" />
+                                
+                            </div>
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="butleft">
+                    </div>
+                </div>
+            </div>
+            <!-- Main content -->
+            <div id="colum2">
+                <asp:ContentPlaceHolder ID="Content" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!-- colum left -->
+            <div id="colum3">
+                <div class="hot_product">
+                    Quảng cáo</div>
+                <a href='Default.aspx'>
+                    <img src='Upload/Banner/right1.jpg' alt='' /></a><div style='padding-bottom: 5px;'>
+                    </div>
+                <a href='Default.aspx'>
+                    <img src='Upload/Banner/right2.jpg' alt='' /></a>
+                <div style='padding-bottom: 5px;'>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="content_but">
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <!--End Content-->
+    <!-- Footer -->
+    <div class="footer">
+        
+        <div class="fx">
+            <div class="address">
+                <b>Đồ án WCF</b><br />
+                <%--<b>Nhóm 17:</b> Lại Minh Vũ và Nguyễn Huỳnh An Nhiên<br />
+                <b>Điện thoại:</b> 0128.63.65.669--%>
+            </div>
+            <div class="copyright">
+                <b>©2011 by MinhVuIT</b><br />
+                All Rights Reserved. Developed by <a href="mailto:minhvu.it@gmail.com">Minh Vu IT</a>.</div>
+        </div>
+        
+    </div>
+    <!--End Footer-->
+    </form>
+</body>
+</html>
